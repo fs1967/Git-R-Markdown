@@ -14,3 +14,4 @@ Es dient als
 \*.Rmd Dateien werden im Github-Browser Fenster NICHT gerendert.
 
 -- vom Browser!
+-- vom PC!
