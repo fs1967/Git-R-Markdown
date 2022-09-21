@@ -1,9 +1,12 @@
-n R-Markdown Projekt.
+# Test-Markdown
+Test Repo für ein R-Markdown Projekt.
 
-Es dient als Spielwiese zu Übungszwecken...
+Es dient als
 
-und ist nicht privat!
+- Spielwiese zu Übungszwecken...
 
-Auf dem GIT-Server geändert!!!
+- und ist nicht privat!
 
-Und diese Zeil kam von dem lokalen Repository!
+\* Auf dem GIT-Server geändert!!!
+
+\* Und diese Zeil kam von dem lokalen Repository!
