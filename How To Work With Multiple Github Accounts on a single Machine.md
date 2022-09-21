@@ -17,7 +17,7 @@ SSH Agent - [Step 3](#step-3) : Add SSH public key to the Github - [Step
 
 <br>
 
-## Step 1 {#step-1}
+## Step 1
 
 ### Create SSH keys for all accounts
 
@@ -70,7 +70,7 @@ it empty and proceed.
 
 <br>
 
-## Step 2 {#step-2}
+## Step 2
 
 ### Add SSH keys to SSH Agent
 
@@ -96,7 +96,7 @@ You can read more about adding keys to SSH Agent
 
 <br>
 
-## Step 3 {#step-3}
+## Step 3
 
 ### Add SSH public key to the Github
 
@@ -111,7 +111,7 @@ For doing this we need to paste the public key on Github:
 
 <br>
 
-## Step 4 {#step-4}
+## Step 4
 
 ### Create a Config File and Make Host Entries
 
@@ -140,7 +140,7 @@ each account we created earlier.
 
 <br>
 
-## Step 5 {#step-5}
+## Step 5
 
 ### Cloning GitHub repositories using different accounts
 
@@ -157,23 +157,21 @@ naming it **TestRepo** Now for cloning the repo use the below command:
 
      [e.g.] git clone git@github.com-fs1967:fs1967/TestRepo.git
 
+<br>
 
-    <br>
+## Finally
 
-    ## Finally
+From now on, to ensure that our commits and pushes from each repository on the system uses the correct GitHub user — we will have to configure **user.email** and **user.name** in every repository freshly cloned or existing before.
 
-    From now on, to ensure that our commits and pushes from each repository on the system uses the correct GitHub user — we will have to configure **user.email** and **user.name** in every repository freshly cloned or existing before.
+Therefore edit the __.git/config__ file in each repository or do this use the following commands.
 
-    ### Die config-Datei in jedem Repository ändern!!!!!
-
-    To do this use the following commands.
-
-    ```git
-        git config user.email "seifriz@dshs.de"
-        git config user.name "seifriz"
+ ``` git
+      git config user.email "seifriz@dshs.de"
+      git config user.name "seifriz"
         
-        git config user.email "f.seifriz@flosoft.de"
-        git config user.name "fs1967"
+      git config user.email "f.seifriz@flosoft.de"
+      git config user.name "fs1967"
+```      
 
 Pick the correct pair for your repository accordingly.
 
