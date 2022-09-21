@@ -1,6 +1,6 @@
 # How To Work With Multiple Github Accounts on a single Machine
 
-<https://gist.github.com/rahularity/86da20fe3858e6b311de068201d279e3>
+https://gist.github.com/rahularity/86da20fe3858e6b311de068201d279e3
 
 Let suppose I have two github accounts, **https:/<span></span>/github.com<span></span>/seifriz** and **https:/<span></span>/github.com<span></span>/fs1967**. Now i want to setup my pc to easily talk to both the github accounts.
 
@@ -44,13 +44,13 @@ Notice here **seifriz** and **fs1967** are the username of my github accounts co
 
 After entering the command the terminal will ask for passphrase, leave it empty and proceed.
 
-![Passphrase Image](https://github.com/rahularity/github-essentials/blob/master/screenshots/passphrase.png)
+![Passphrase Image](images/ssh keygen-01.png)
 
 > Now after adding keys, in your .ssh folder, a public key and a private will get generated.
 
 >The public key will have an extention __.pub__ and private key will be there without any extention both having same name which you have passed after __-f__ option in the above command. (in my case __github-seifriz__ and __github-fs1967__)
 
-![Added Key Image](https://github.com/rahularity/github-essentials/blob/master/screenshots/ssh_keys_added.png)
+![Added Key Image](/images/ssh keygen-02.png)
 
 <br>
 
