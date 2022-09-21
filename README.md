@@ -16,4 +16,4 @@ Es dient als
 
 ## Mehrere Github-Accounts auf einem Computer
 
-s. How To Work With Multiple Github Accounts on a single Machine
+siehe: How To Work With Multiple Github Accounts on a single Machine
