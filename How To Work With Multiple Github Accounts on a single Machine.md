@@ -54,7 +54,10 @@ After entering the command the terminal will ask for passphrase, leave it empty 
 ## Step 2
 ### Add SSH keys to SSH Agent
 
-Falls SSH Agent nicht gestartet ist: 'eval $(ssh-agent -s)
+Falls SSH Agent nicht gestartet ist
+```sh
+     eval $(ssh-agent -s)
+```
 
 Now we have the keys but it cannot be used until we add them to the SSH Agent.
 ```sh

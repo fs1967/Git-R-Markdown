@@ -13,5 +13,3 @@ Es dient als
 \*.md Dateien werden im Github-Browser Fenster gerendert.
 
 \*.Rmd Dateien werden im Github-Browser Fenster NICHT gerendert.
-
--- vom Browser! -- vom PC!
