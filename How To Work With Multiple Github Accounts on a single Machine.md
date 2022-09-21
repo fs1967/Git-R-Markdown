@@ -1,5 +1,7 @@
 # How To Work With Multiple Github Accounts on a single Machine
 
+<https://gist.github.com/rahularity/86da20fe3858e6b311de068201d279e3>
+
 Let suppose I have two github accounts, **https:/<span></span>/github.com<span></span>/rahul-office** and **https:/<span></span>/github.com<span></span>/rahul-personal**. Now i want to setup my mac to easily talk to both the github accounts.
 
 > NOTE: This logic can be extended to more than two accounts also. :)
