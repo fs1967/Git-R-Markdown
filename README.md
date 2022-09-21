@@ -1,4 +1,4 @@
-# Test-Markdown
+# Git-R-Markdown
 
 Test Repo für ein R-Markdown Projekt.
 
@@ -16,4 +16,4 @@ Es dient als
 
 ## Mehrere Github-Accounts auf einem Computer
 
-...
+s. ???
