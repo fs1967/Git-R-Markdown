@@ -7,6 +7,8 @@ Es dient als
 
 - und ist nicht privat!
 
-\* Auf dem GIT-Server geändert!!!
+## Erkenntnis
 
-\* Und diese Zeil kam von dem lokalen Repository!
+\*.md Dateien werden im Github-Browser Fenster gerendert.
+
+\*.Rmd Dateien werden im Github-Browser Fenster NICHT gerendert.
