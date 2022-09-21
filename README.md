@@ -1,11 +1,12 @@
 # Test-Markdown
+
 Test Repo für ein R-Markdown Projekt.
 
 Es dient als
 
-- Spielwiese zu Übungszwecken...
+-   Spielwiese zu Übungszwecken...
 
-- und ist nicht privat!
+-   und ist nicht privat!
 
 ## Erkenntnis
 
@@ -13,5 +14,4 @@ Es dient als
 
 \*.Rmd Dateien werden im Github-Browser Fenster NICHT gerendert.
 
--- vom Browser!
--- vom PC!
+-- vom Browser! -- vom PC!
