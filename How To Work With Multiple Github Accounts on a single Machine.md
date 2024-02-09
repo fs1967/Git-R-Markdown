@@ -1,14 +1,26 @@
+---
+---
+---
+
 # How To Work With Multiple Github Accounts on a single Machine
 
 <https://gist.github.com/rahularity/86da20fe3858e6b311de068201d279e3>
 
-Let suppose I have two github accounts, [**https:/**](https:/){.uri}**/github.com/seifriz** and [**https:/**](https:/){.uri}**/github.com/fs1967**. Now i want to setup my pc to easily talk to both the github accounts.
+Let suppose I have two github accounts, <https://github.com/seifriz> and <https://github.com/fs1967>. Now I want to setup my computer (Dell-3640) to easily talk to both the github accounts.
 
 > NOTE: This logic can be extended to more than two accounts also. :)
 
-The setup can be done in 5 easy steps: \## Steps: - [Step 1](#step-1) : Create SSH keys for all accounts - [Step 2](#step-2) : Add SSH keys to SSH Agent - [Step 3](#step-3) : Add SSH public key to the Github - [Step 4](#step-4) : Create a Config File and Make Host Entries - [Step 5](#step-5) : Cloning GitHub repositories using different accounts
+The setup can be done in 5 easy steps:
 
-<br>
+-   [Step1](#step-1) : Create SSH keys for all accounts
+
+-   [Step 2](#step-2) : Add SSH keys to SSH Agent
+
+-   [Step 3](#step-3) : Add SSH public key to the Github
+
+-   [Step 4](#step-4) : Create a Config File and Make Host Entries
+
+-   [Step 5](#step-5) : Cloning GitHub repositories using different accounts
 
 ## Step 1 {#step-1}
 
@@ -39,19 +51,15 @@ here,
      ssh-keygen -t rsa -C "f.seifriz@flosoft.de" -f "github-fs1967"
 ```
 
-Notice here **seifriz** and **fs1967** are the username of my github accounts corresponding to [**seifriz\@dshs-koeln.de**](mailto:seifriz@dshs-koeln.de){.email} and [**f.seifriz\@f.flosoft.de**](mailto:f.seifriz@f.flosoft.de){.email} email ids respectively.
+Notice here **seifriz** and **fs1967** are the username of my github accounts corresponding to **seifriz\@dshs-koeln.de** and **f.seifriz\@flosoft.de** email ids respectively.
 
 After entering the command the terminal will ask for passphrase, leave it empty and proceed.
 
 ![Passphrase Image](images/ssh%20keygen-01.png)
 
-> Now after adding keys, in your .ssh folder, a public key and a private will get generated.
-
-> The public key will have an extention **.pub** and private key will be there without any extention both having same name which you have passed after **-f** option in the above command. (in my case **github-seifriz** and **github-fs1967**)
+Now after adding keys, in your .ssh folder, a public key (\*.pub) and a private will get generated. The public key will have an extension (\*.pub) and private key will be there without any extension both having same name which you have passed after **-f** option in the above command. (in my case **github-seifriz** and **github-fs1967**)
 
 ![Added Key Image](images/ssh%20keygen-02.png)
-
-<br>
 
 ## Step 2 {#step-2}
 
@@ -66,30 +74,24 @@ If the SSH Agent is not started
 Now we have the keys but it cannot be used until we add them to the SSH Agent.
 
 ``` sh
-     #ssh-add -K ~/.ssh/github-seifriz
-     #ssh-add -K ~/.ssh/github-fs1967
-     
      ssh-add ~/.ssh/github-seifriz
      ssh-add ~/.ssh/github-fs1967
 ```
 
 You can read more about adding keys to SSH Agent [here.](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-<br>
-
 ## Step 3 {#step-3}
 
 ### Add SSH public key to the Github
 
-For the next step we need to add our public key (that we have generated in our previous step) and add it to corresponding github accounts.
+For the next step we need to add our public key (that we have generated in our previous step; \*.pub) and add it to corresponding github accounts.
 
-For doing this we need to paste the public key on Github:
+For doing this we need to paste the public key (\*.pub) on Github:
 
--   Sign in to Github Account
--   Goto **Settings** \> **SSH and GPG keys** \> **New SSH Key**
--   Paste your copied public key and give it a Title of your choice.
-
-<br>
+-   Sign in to Github each account
+-   Goto Settings \> SSH and GPG keys \> New SSH Key
+-   Paste your copied public key (\*.pub) and give it a title of your choice.
+-   Example: "**fs1967\@Dell-3640**" and "**seifriz\@Dell-3640**"
 
 ## Step 4 {#step-4}
 
@@ -115,8 +117,6 @@ Now we need to add these lines to the file, each block corresponding to each acc
           IdentityFile ~/.ssh/github-fs1967
 ```
 
-<br>
-
 ## Step 5 {#step-5}
 
 ### Cloning GitHub repositories using different accounts
@@ -127,13 +127,14 @@ Make a new project folder where you want to clone your repository and go to that
 
 For Example: I am making a repository on my personal github account and naming it **TestRepo** Now for cloning the repo use the below command: \`\`\`git git clone [git\@github.com](mailto:git@github.com){.email}-{your-username}:{owner-user-name}/{the-repo-name}.git
 
-     [e.g.] git clone git@github.com-fs1967:fs1967/TestRepo.git
-
-<br>
+```         
+ git clone git@github.com-fs1967:fs1967/TestRepo.git
+ git clone git@github.com-seifriz:seifriz/TestRepo.git
+```
 
 ## Finally
 
-From now on, to ensure that our commits and pushes from each repository on the system uses the correct GitHub user --- we will have to configure **user.email** and **user.name** in every repository freshly cloned or existing before.
+From now on, to ensure that our commits and pushes from each repository on the system uses the correct GitHub user we will have to configure **user.email** and **user.name** in every repository freshly cloned or existing before.
 
 Therefore edit the **.git/config** file in each repository or do this use the following commands.
 
@@ -145,7 +146,9 @@ Therefore edit the **.git/config** file in each repository or do this use the fo
      git config user.name "fs1967"
 ```
 
-Pick the correct pair for your repository accordingly.
+![config file in .git folder](images/ssh keygen-03.png)
+
+## Using Git Bash
 
 To push or pull to the correct account we need to add the remote origin to the project
 
@@ -162,3 +165,11 @@ Now you can use:
      
      git pull
 ```
+
+## Using Git GUI
+
+1.  Stage
+
+2.  Commit
+
+3.  Push
