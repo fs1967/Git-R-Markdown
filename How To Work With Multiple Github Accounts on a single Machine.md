@@ -146,7 +146,7 @@ Therefore edit the **.git/config** file in each repository or do this use the fo
      git config user.name "fs1967"
 ```
 
-![config file in .git folder](images/ssh keygen-03.png)
+![config file in .git folder](images/ssh%20keygen-03.png)
 
 ## Using Git Bash
 

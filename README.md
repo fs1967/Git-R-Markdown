@@ -10,7 +10,7 @@ Es dient als
 
 ## Erkenntnis
 
-\*.md Dateien werden im Github-Browser Fenster gerendert.
+\*.md Dateien werden im Github-Browser Fenster gerendert, stimmen aber nicht wirklich mit dem Markdown in R-Studio überein!!!!
 
 \*.Rmd Dateien werden im Github-Browser Fenster NICHT gerendert.
 
